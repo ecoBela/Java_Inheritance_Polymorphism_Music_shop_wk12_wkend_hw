@@ -36,5 +36,10 @@ public class PianoTest {
         assertEquals("black", piano.getColour());
     }
 
+    @Test
+    public void hasMaterial(){
+        assertEquals("beech", piano.getMaterial());
+    }
+
 
 }
