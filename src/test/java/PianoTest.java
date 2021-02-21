@@ -26,5 +26,10 @@ public class PianoTest {
         assertEquals(400.00, piano.getBuyingPrice(), 0.01);
     }
 
+    @Test
+    public void hasSellingPrice(){
+        assertEquals(800, piano.getSellingPrice(), 0.01);
+    }
+
 
 }
