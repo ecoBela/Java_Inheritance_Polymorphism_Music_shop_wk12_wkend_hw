@@ -41,5 +41,10 @@ public class PianoTest {
         assertEquals("beech", piano.getMaterial());
     }
 
+    @Test
+    public void hasNoOfPedals(){
+        assertEquals(3, piano.getNoOfPedals());
+    }
+
 
 }
