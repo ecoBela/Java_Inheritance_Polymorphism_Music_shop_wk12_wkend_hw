@@ -42,4 +42,15 @@ public class MusicShopTest {
     public void storeHasName(){
         assertEquals("Max's music shop", musicShop.getName());
     }
+
+    @Test
+    public void addItemsToStock(){
+        musicShop.getStock().add(piano);
+        musicShop.getStock().add(guitar);
+        assertEquals(2, musicShop.getNumberOfItemsInStockList());
+    }
+
+    
+
+
 }

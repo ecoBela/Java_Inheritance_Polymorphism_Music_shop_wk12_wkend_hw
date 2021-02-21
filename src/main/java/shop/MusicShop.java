@@ -18,7 +18,11 @@ public class MusicShop {
         return name;
     }
     public ArrayList<ISell> getStock() {
-        return stock;
+        return this.stock;
+    }
+
+    public int getNumberOfItemsInStockList(){
+        return this.stock.size();
     }
 
 
