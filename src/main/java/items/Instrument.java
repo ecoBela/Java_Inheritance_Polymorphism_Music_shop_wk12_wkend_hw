@@ -1,6 +1,8 @@
 package items;
 
-public class Instrument extends Item{
+import behaviours.IPlay;
+
+public class Instrument extends Item implements IPlay {
     private String colour;
     private String material;
 
@@ -17,5 +19,9 @@ public class Instrument extends Item{
 
     public String getMaterial() {
         return material;
+    }
+
+    public String play(String data) {
+        return data;
     }
 }

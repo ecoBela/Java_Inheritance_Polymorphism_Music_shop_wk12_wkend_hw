@@ -46,5 +46,10 @@ public class PianoTest {
         assertEquals(3, piano.getNoOfPedals());
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("da da da la la", piano.play("da da da la la"));
+    }
+
 
 }
