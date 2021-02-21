@@ -31,5 +31,10 @@ public class PianoTest {
         assertEquals(800, piano.getSellingPrice(), 0.01);
     }
 
+    @Test
+    public void hasColour(){
+        assertEquals("black", piano.getColour());
+    }
+
 
 }
