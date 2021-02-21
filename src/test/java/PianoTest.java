@@ -11,7 +11,7 @@ public class PianoTest {
     public void before(){
         piano = new Piano(
                 "Upright Piano",
-                400.00, 800.00,
+                600.00, 800.00,
                 "black", "beech", 3);
     }
 
@@ -23,12 +23,12 @@ public class PianoTest {
 
     @Test
     public void hasBuyingPrice(){
-        assertEquals(400.00, piano.getBuyingPrice(), 0.01);
+        assertEquals(600.00, piano.getBuyingPrice(), 0.01);
     }
 
     @Test
     public void hasSellingPrice(){
-        assertEquals(800, piano.getSellingPrice(), 0.01);
+        assertEquals(800.00, piano.getSellingPrice(), 0.01);
     }
 
     @Test
@@ -49,6 +49,11 @@ public class PianoTest {
     @Test
     public void canPlay(){
         assertEquals("da da da la la", piano.play("da da da la la"));
+    }
+
+    @Test
+    public void checkMarkUp(){
+        assertEquals(33.33, piano.calcMarkUp(), 0.01);
     }
 
 
