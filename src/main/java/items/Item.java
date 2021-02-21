@@ -1,6 +1,8 @@
 package items;
 
-public abstract class Item {
+import behaviours.ISell;
+
+public abstract class Item implements ISell {
     private String itemName;
     private double buyingPrice;
     private double sellingPrice;
@@ -20,15 +22,17 @@ public abstract class Item {
         return buyingPrice;
     }
 
-    public void setBuyingPrice(double buyingPrice) {
-        this.buyingPrice = buyingPrice;
+    public double calcMarkUp(){
+        double difference = this.sellingPrice - this.buyingPrice;
+        return (difference / this.buyingPrice ) * 100;
     }
+
 
     public double getSellingPrice() {
         return sellingPrice;
     }
 
-    public void setSellingPrice(double sellingPrice) {
-        this.sellingPrice = sellingPrice;
-    }
+
+
+
 }
