@@ -47,10 +47,21 @@ public class MusicShopTest {
     public void addItemsToStock(){
         musicShop.getStock().add(piano);
         musicShop.getStock().add(guitar);
-        assertEquals(2, musicShop.getNumberOfItemsInStockList());
+        musicShop.getStock().add(sheetMusic);
+        assertEquals(3, musicShop.getNumberOfItemsInStockList());
     }
 
-    
+    @Test
+    public void removeItemsFromStock(){
+        musicShop.getStock().add(piano);
+        musicShop.getStock().add(guitar);
+        musicShop.getStock().add(sheetMusic);
+        musicShop.getStock().remove(piano);
+        assertEquals(2, musicShop.getNumberOfItemsInStockList());
+
+    }
+
+
 
 
 }
